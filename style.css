@@ -1,5 +1,6 @@
 html {
   @import url('https://fonts.googleapis.com/css?family=Roboto');
+  @import url('https://fonts.googleapis.com/css?family=PT+Serif');
 }
 
 body {
@@ -146,5 +147,8 @@ article > div > img{
   .main-pic {
     padding-right:10px;
   }
-  
 }
+
+@media print {
+  font-family:'PT Serif', serif;
+} 
