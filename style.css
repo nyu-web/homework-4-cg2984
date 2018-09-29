@@ -143,10 +143,11 @@ article > div > img{
   border-right: 2px solid #d7d7d7;
 }
 
-@media (height <= 1024 and width <=786){
+@media (height <= 1024, width <=786){
   .main-features{
     display: flex;
     flex-orientation: column; 
+    background-color: #65f27d;
   }
   .main-pic {
     padding-right:10px;
