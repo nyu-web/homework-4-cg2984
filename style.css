@@ -141,3 +141,10 @@ article > div > img{
   padding-right: 30px;
   border-right: 2px solid #d7d7d7;
 }
+
+@media (height <= 1024 and width <=1366){
+  .main-pic {
+    padding-right:10px;
+  }
+  
+}
