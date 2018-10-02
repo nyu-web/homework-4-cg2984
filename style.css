@@ -54,7 +54,7 @@ li{
 
 
 
-.top-article{
+section{
   display: flex;
   background-color:white;
   justify-content: space-between;
@@ -63,14 +63,14 @@ li{
   border-bottom: 7px black double;
 }
 
-.top-article > div > img {
+section > div > img {
   height: 200px;
   width: 300px;
   margin: 10px;
   padding: 10px 50px 10px 10px;
   border-right: 2px #d7d7d7 solid;
 }
-.top-article > div > h3 {
+section > div > h3 {
   align-items: center;
 }
 
@@ -126,8 +126,6 @@ li{
   align-self: center;
 }
 
-
-
 article > div > img{
   height: 200px;
   width: 300px;
@@ -148,18 +146,15 @@ article > div > img{
 @media (max-width: 1500px){
 
   header{
-    display:flex;
-    flex-direction: column;
+    display:grid;
+    grid-template: repeat(3,200px)/repeat(3,200px);
   }
 
   nav {
-    grid-row: 1;
+    grid-row: 1/4;
     grid-column: 1;
-    display:flex;
-
+    display:flex; '''affects the list so that it goes down the side'''
   }
-
-
 
   nav > h1{
     margin: 0;
@@ -185,36 +180,66 @@ article > div > img{
   }
 
   main{
-    display:grid;
-    grid-template: repeat(4,25%)/50% 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
   }
 
-  section{
-    grid-row: 1;
-    grid-column: 1/2;
+  .t-one{
+    grid-row: 2;
+    grid-column: 2;
+    width: 50px;
+  }
+  .t-two{
+    grid-row: 2;
+    grid-column: 3;
+    width: 50px;
+  }
+  .t-three{
+    grid-row: 2;
+    grid-column: 4;
+    width: 50px;
+  }
+  .t-four{
+    grid-row: 3;
+    grid-column: 2;
+    width: 50px;
+  }
+  .t-five{
+    grid-row: 3;
+    grid-column: 3;
+    width: 50px;
   }
 
   .five{
-    grid-row: 2;
-    grid-column: 1/2;
-    display: grid;
-    
+    grid-row: 1;
+    grid-column: 1;
+    margin:0;
+    padding:0;
   }
   .one {
     grid-row: 3;
     grid-column: 1;
+    margin:0;
+    padding:0;
   }
   .two {
     grid-row: 3;
     grid-column: 2;
+    margin:0;
+    padding:0;
   }
   .three {
     grid-row: 4;
     grid-column: 1;
+    margin:0;
+    padding:0;
   }
   .four {
     grid-row: 4;
     grid-column: 2;
+    margin:0;
+    padding:0;
   }
 }
 
